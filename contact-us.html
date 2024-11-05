@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
 		<link
@@ -11,42 +12,116 @@
 		<title>EK::Travel Bloom</title>
 	</head>
 	<body>
-		<nav>
-			<div class="logo-container">
-				<h1>TravelBloom</h1>
-			</div>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about-us.html">About Us</a></li>
-				<li><a href="contact-us.html">Contact Us</a></li>
-			</ul>
-		</nav>
-		<header class="contact">
-			<div class="social-media-container">
-				<div class="line"></div>
-				<div class="social-media">
-					<a href=""><i class="bi bi-twitter-x"></i></a>
-					<a href=""><i class="bi bi-facebook"></i></a>
-					<a href=""><i class="bi bi-instagram"></i></a>
-					<a href=""><i class="bi bi-youtube"></i></a>
+		<main class="h-screen">
+			<nav
+				class="bg-slate-950/50 dark:bg-gray-900 fixed w-full z-20 top-0 start-0 dark:border-gray-600">
+				<div
+					class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+					<a
+						href="index.html"
+						class="logo-container flex items-center space-x-3 rtl:space-x-reverse">
+						<img
+							src="./images/ek_circle_blue.svg"
+							class="h-8"
+							alt="Flowbite Logo" />
+						<span
+							class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white text-white"
+							>TravelBloom</span
+						>
+					</a>
+
+					<div
+						class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+						id="navbar-sticky">
+						<ul
+							class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+							<li>
+								<a
+									href="index.html"
+									class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+									>Home</a
+								>
+							</li>
+							<li>
+								<a
+									href="about-us.html"
+									class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+									>About Us</a
+								>
+							</li>
+							<li>
+								<a
+									href="contact-us.html"
+									class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+									aria-current="page"
+									>Contact Us</a
+								>
+							</li>
+						</ul>
+					</div>
 				</div>
-			</div>
-			<div class="contact-content">
-				<div class="contact-left-content">
-					<h1>Contact Us</h1>
-					<p>
-						Get in touch Lorem ipsum dolor sit amet consectetur adipisicing
-						elit. Dicta, sapiente?
-					</p>
+			</nav>
+			<header
+				class="flex items-center bg-slate-950/50 px-10 h-full fixed relative">
+				<div
+					class="social-media-container flex flex-col justify-center absolute items-center">
+					<div class="line bg-white w-0.5 h-60 mb-6"></div>
+					<div class="social-media flex flex-col text-2xl text-white">
+						<a href="" class="my-2 p-1"><i class="bi bi-twitter-x"></i></a>
+						<a href="" class="my-2 p-1"><i class="bi bi-facebook"></i></a>
+						<a href="" class="my-2 p-1"><i class="bi bi-instagram"></i></a>
+						<a href="" class="my-2 p-1"><i class="bi bi-youtube"></i></a>
+					</div>
 				</div>
-				<div class="contact-form">
-					<input type="text" name="name" id="name" />
-					<input type="email" name="email" id="email" />
-					<textarea name="message" id="message" cols="" rows="8"></textarea>
-					<button type="submit" class="btn">Submit</button>
+				<div class="mx-auto w-4/5 h-4/5 flex justify-between gap-x-16">
+					<div class="flex flex-col justify-center h-full w-1/2">
+						<h1
+							class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-white uppercase">
+							Contact Us
+						</h1>
+						<p
+							class="mb-4 text-lg font-normal text-gray-100 dark:text-gray-400">
+							Get in touch Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Dicta, sapiente?
+						</p>
+					</div>
+					<div class="flex flex-col justify-center h-full w-1/2">
+						<form action="" class="w-full mx-auto">
+							<div class="mb-4">
+								<input
+									type="text"
+									name="name"
+									id="name"
+									placeholder="Your name"
+									class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+							</div>
+							<div class="mb-4">
+								<input
+									type="email"
+									name="email"
+									id="email"
+									placeholder="Your email"
+									class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+							</div>
+							<div class="mb-4">
+								<textarea
+									name="message"
+									id="message"
+									cols=""
+									rows="8"
+									placeholder="Your message"
+									class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+							</div>
+							<button
+								type="button"
+								class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-14 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+								Submit
+							</button>
+						</form>
+					</div>
 				</div>
-			</div>
-		</header>
+			</header>
+		</main>
 
 		<script src="travel_recommendation.js"></script>
 	</body>
