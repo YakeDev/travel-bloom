@@ -22,7 +22,7 @@ TravelBloom aims to provide an immersive user experience that encourages explora
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/travelbloom.git
+git clone https://github.com/YakeDev/travelbloom.git
 
 # Open the index.html file in your browser to view the site in action
 ```
